@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio personnel en ligne</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="content">
+        <header>
+            <nav>
+                <div>
+                    <h2 class="logo">Kouame <span class="prenom">Yao Daniel Junior</span></h2>
+                </div>
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul>
+                    <li><a href="#accueil" class="active">Accueil</a></li>
+                    <li><a href="#apropos">A propos</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#competence">Compétences</a></li> 
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--section accueil-->
+        <section class="home" id="accueil">
+            <div class="home-content">
+                <div class="home-text">
+                    <p>Je suis <span class="nom">Yao Daniel Junior</span>, Développeur en devenir passionné par le web et le design ! </p>
+                    <a href="#projets"><button type="button" id="hoverButton">Voir mes projets</button></a>
+                </div>
+                <div class="home-image">
+                    <img src="Images/Image1.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!--section A propos-->
+        <section class="infos" id="apropos">
+            <div class="infos-content">
+                <div class="infos-text">
+                    <h2>A propos</h2>
+                    <p>Je m'appelle <span class="nom1">Kouame</span>, passionné par la <br> création de sites web modernes et interactifs</p>
+                    <p>Je suis actuellement étudiant en <span class="mot">dévelopement web</span>, <br> et je cherche à améliorer mes compétences en JavaScript, HTML et CSS. </p>
+                    <p>J'adore transformer mes idées en projets concrets <br> et expérimenter avec les nouvelles technologies.</p>
+                    <a href="Images/CV_Kouame_Yao Daniel Junior.pdf"  download><button>Télécharger mon CV</button></a>
+                </div>
+                <div class="infos-image">
+                    <img src="Images/Image2.jpg" alt="Image représentant Yao Daniel Junior, développeur web passionné">
+                </div>
+            </div>
+        </section>
+
+        <!--section Mes projets-->
+        <section class="project" id="projets">
+            <h2>Mes Projets</h2>
+            <div class="project-content">
+                <div class="project-text1">
+                    <p>Calculateur de prêt hypothécaire interactif permettant de saisir un montant, un taux d'intérêt et une durée pour estimer les mensualités, avec validation et gestion des erreurs.</p>
+                    <p>#html, #css, #js</p>
+                    <a href="Mes projets/calculateur.html" target="_blank"><button>Voir</button></a>
+                </div>
+                <div class="project-text2">
+                    <p>Formulaire interactif permettant de saisir une date, d'afficher son jour, mois et année séparément, et de calculer la différence en jours avec la date actuelle.</p>
+                    <p>#html, #css, #js</p>
+                    <a href="Mes projets/exercise3.html" target="_blank"><button>Voir</button></a>
+                </div>
+                <div class="project-text3">
+                    <p>Générateur de citations aléatoires qui propose des citations inspirantes, motivantes et variées à chaque utilisation.</p>
+                    <p>#html, #css, #js</p>
+                    <a href="Mes projets/generateur.html" target="_blank"><button>Voir</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="Competence" id="competence">
+            <h2>Mes compétences</h2>
+            <div class="Competence-content">
+                <div class="Competence-soft">
+                    <h3>Soft Skills</h3>
+                    <div class="skills">
+                        <p>Gestion de projet</p>
+                        <div class="barre-progression">
+                            <div class="progression-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <p>Résolution de problème</p>
+                        <div class="barre-progression">
+                            <div class="progression-fill" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <p>Adaptabilité</p>
+                        <div class="barre-progression">
+                            <div class="progression-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Competence-hard">
+                    <h3>Hard Skills</h3>
+                    <div class="skills">
+                        <p>HTML</p>
+                        <div class="barre-progression">
+                            <div class="progression-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <p>CSS</p>
+                        <div class="barre-progression">
+                            <div class="progression-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <p>JavaScript</p>
+                        <div class="barre-progression">
+                            <div class="progression-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form" id="contact">
+            <h2>Vous avez un <span class="contact1">projet en tête ?</span> <br>N'hésitez pas à me <span class="contact2">contacter</span> </h2>
+            <form action="" method="post">
+                <div class="form-content">
+                    <div class="form-input1">
+                        <div class="input-group">
+                            <label for="prenom">Votre prénom</label>
+                            <input type="text" id="prenom" name="prenom" placeholder="Daniel" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="nom">Votre nom</label>
+                            <input type="text" id="nom" name="nom" placeholder="Kouame" required>
+                        </div>
+                    </div>
+                    <div class="form-input2">
+                        <label for="sujet">Votre sujet</label>
+                        <input type="text" id="sujet" name="sujet" placeholder="Dévellopement web" required>
+                    </div>
+                    <div class="form-input3">
+                        <textarea name="message" id="message" cols="103" rows="20" placeholder="Ecrivez un message" required></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit" id="hoverButton">Envoyer</button>
+                    </div>
+                </div>
+                
+            </form>
+        </section>
+
+        <footer>
+                <p >Designed by <span class="name">Kouame Yao Daniel Junior</span> with HTML CSS JS</p>
+                <p class="para1"> Tous droits réservés - 2025</p>
+        </footer>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

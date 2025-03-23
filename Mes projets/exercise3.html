@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 3</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 30px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+#difference {
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+    </style>
+</head>
+<body>
+
+    <h2>Manipulation de dates (Date)</h2>
+    <input type="text" id="Date" name="Date" placeholder="Entrez une date (JJ-MM-AAAA) " size="30">
+    <button onclick="afficherDate()">Afficher</button>
+
+    <p id="jour">Jour : </p>
+    <p id="mois">Mois : </p>
+    <p id="annee">Année : </p>
+    <p id="difference">Différence en jours : </p>
+
+    <script>
+        function afficherDate() {
+    let saisie = document.getElementById("Date").value;
+    let partie = saisie.split("-"); 
+
+    let jour = parseInt(partie[0]);
+    let mois = parseInt(partie[1]) - 1; 
+    let annee = parseInt(partie[2]);
+
+    let dateSaisie = new Date(annee, mois, jour); 
+
+    document.getElementById("jour").textContent = "Jour : " + dateSaisie.getDate();
+    document.getElementById("mois").textContent = "Mois : " + (dateSaisie.getMonth() + 1);
+    document.getElementById("annee").textContent = "Année : " + dateSaisie.getFullYear();
+
+    let aujourdHui = new Date();
+    let difference = Math.floor((aujourdHui - dateSaisie) / (1000 * 60 * 60 * 24));
+    document.getElementById("difference").textContent = "Différence en jours : " + difference;
+}
+    </script>
+</body>
+</html>

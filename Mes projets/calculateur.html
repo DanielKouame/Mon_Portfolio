@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 6</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p#resultat {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <h2> Projet final - Calculateur de prêt hypothécaire</h2>
+
+    <label for="montant">Montant du prêt (FCFA) :</label>
+    <input type="number" id="montant">
+
+    <br><br>
+
+    <label for="taux">Taux d'intérêt annuel (%) :</label>
+    <input type="number" id="taux">
+
+    <br><br>
+
+    <label for="duree">Durée (années) :</label>
+    <input type="number" id="duree">
+
+    <br><br>
+
+    <button onclick="calculerMensualite()">Calculer</button>
+
+    <p id="resultat"></p>
+    <script>
+        function calculerMensualite() {
+    let montant = Number(document.getElementById("montant").value);
+    let tauxAnnuel = Number(document.getElementById("taux").value);
+    let dureeAnnees = Number(document.getElementById("duree").value);
+
+    if (isNaN(montant) || montant <= 0) {
+        alert("Veuillez entrer un montant valide !");
+        return;
+    }
+    if (isNaN(tauxAnnuel) || tauxAnnuel <= 0) {
+        alert("Veuillez entrer un taux d'intérêt valide !");
+        return;
+    }
+    if (isNaN(dureeAnnees) || dureeAnnees <= 0) {
+        alert("Veuillez entrer une durée valide !");
+        return;
+    }
+
+    let tauxMensuel = (tauxAnnuel / 100) / 12; 
+    let nbMois = dureeAnnees * 12; 
+
+    let M = montant * (tauxMensuel * Math.pow(1 + tauxMensuel, nbMois)) / (Math.pow(1 + tauxMensuel, nbMois) - 1);
+
+    document.getElementById("resultat").textContent = "Mensualité : " + M.toFixed(2) + " FCFA";
+}
+    </script> 
+</body>
+</html>

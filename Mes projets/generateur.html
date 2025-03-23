@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Citations</title>
+    <style>
+        /* Style général du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, red,blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteneur de la citation */
+#quote-box {
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 26px black;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Style de la citation */
+#quote {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Style de l'auteur */
+#author {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Style du bouton */
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+button:hover {
+    background-color: #4cae4c;
+}
+    </style>
+</head>
+<body>
+    <div id="quote-box">
+        <div id="quote">Cliquez sur le bouton pour une citation.</div>
+        <div id="author"></div>
+        <button onclick="generateQuote()">Générer une citation</button>
+    </div>
+
+    <script>
+
+const quotes = [
+    { text: "Le plus grand risque est de ne prendre aucun risque.", author: "Mark Zuckerberg" },
+    { text: "La vie est un mystère qu'il faut vivre, et non un problème à résoudre.", author: "Gandhi" },
+    { text: "Le succès est la somme de petits efforts répétés jour après jour.", author: "Robert Collier" },
+    { text: "Tous nos rêves peuvent devenir réalité, encore faut-il avoir le courage de les poursuivre.", author: "Walt Disney" },
+    { text: "L'échec est le fondement de la réussite.", author: "Lao Tseu" },
+    { text: "La vie commence là où commence ta zone de confort.", author: "Neale Donald Walsch" },
+    { text: "Ce n'est pas la destination qui compte, mais le voyage.", author: "Ralph Waldo Emerson" },
+    { text: "Il n'y a pas de réussite sans échec.", author: "Robert T.Kiyosaki" },
+    { text: "Le seul moyen de faire du bon travail est d'aimer ce que vous faites.", author: "Steve Jobs" },
+    { text: "Faites aujourd'hui ce que d'autres ne veulent pas faire, demain vous ferez ce que d'autres ne peuvent pas faire.", author: "Jerry Rice" },
+    { text: "L'amour ne se résume pas à un simple sentiment, c'est un choix quotidien .", author: "Gary Chapman" },
+    { text: "L'amour est la seule réalité, et c'est bien la seule chose qui compte.", author: "Leo Buscaglia" },
+];
+
+function generateQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quote = quotes[randomIndex];
+    document.getElementById('quote').innerText = quote.text;
+    document.getElementById('author').innerText = `- ${quote.author}`;
+}
+    </script>
+</body>
+</html>
