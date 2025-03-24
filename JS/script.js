@@ -38,3 +38,19 @@ button.addEventListener("mouseover", function() {
 button.addEventListener("mouseout", function() {
     button.style.transform = "translateY(0)"; // Retour à la position initiale
 });
+
+
+// Gestion de l'envoi du formulaire
+document.getElementById("contact").addEventListener("submit", function(event) {
+    event.preventDefault(); // Empêcher le rechargement de la page
+    const prenom = document.getElementById("prenom").value;
+    const nom = document.getElementById("nom").value;
+    const sujet = document.getElementById("sujet").value;
+    const message = document.getElementById("message").value;
+
+    if (!prenom || !nom || !sujet || !message) {
+        alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
+    } else {
+        alert("Merci pour votre message, " + prenom + " " + nom + " !");
+    }
+});

@@ -7,16 +7,13 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+    <!--J'ai crée une div qui englobe tout mon contenu-->
     <div class="content">
+        <!--L'entête de mon Portfolio-->
         <header>
             <nav>
                 <div>
                     <h2 class="logo">Kouame <span class="prenom">Yao Daniel Junior</span></h2>
-                </div>
-                <div class="menu-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
                 </div>
                 <ul>
                     <li><a href="#accueil" class="active">Accueil</a></li>
@@ -28,28 +25,28 @@
             </nav>
         </header>
 
-        <!--section accueil-->
+        <!--La section accueil de mon Portfolio-->
         <section class="home" id="accueil">
             <div class="home-content">
                 <div class="home-text">
-                    <p>Je suis <span class="nom">Yao Daniel Junior</span>, Développeur en devenir passionné par le web et le design ! </p>
+                    <p>Je suis <span class="prenom">Yao Daniel Junior</span>, Développeur en devenir passionné par le web et le design ! </p>
                     <a href="#projets"><button type="button" id="hoverButton">Voir mes projets</button></a>
                 </div>
                 <div class="home-image">
-                    <img src="Images/Image1.jpg" alt="">
+                    <img src="Images/Image1.jpg" alt="Une illustration des développeurs">
                 </div>
             </div>
         </section>
 
-        <!--section A propos-->
+        <!-- La section à propos de mon Portfolio-->
         <section class="infos" id="apropos">
+            <h2>A propos</h2>
             <div class="infos-content">
                 <div class="infos-text">
-                    <h2>A propos</h2>
                     <p>Je m'appelle <span class="nom1">Kouame</span>, passionné par la <br> création de sites web modernes et interactifs</p>
-                    <p>Je suis actuellement étudiant en <span class="mot">dévelopement web</span>, <br> et je cherche à améliorer mes compétences en JavaScript, HTML et CSS. </p>
+                    <p>Je suis actuellement étudiant en <span class="nom1">dévelopement web</span>, <br> et je cherche à améliorer mes compétences en JavaScript, HTML et CSS. </p>
                     <p>J'adore transformer mes idées en projets concrets <br> et expérimenter avec les nouvelles technologies.</p>
-                    <a href="Images/CV_Kouame_Yao Daniel Junior.pdf"  download><button>Télécharger mon CV</button></a>
+                    <a href="Images/CV_Kouame_Yao Daniel Junior.pdf"  download><button>Télécharger mon cv</button></a>
                 </div>
                 <div class="infos-image">
                     <img src="Images/Image2.jpg" alt="Image représentant Yao Daniel Junior, développeur web passionné">
@@ -57,21 +54,21 @@
             </div>
         </section>
 
-        <!--section Mes projets-->
+        <!--section Mes projets de Portfolio-->
         <section class="project" id="projets">
             <h2>Mes Projets</h2>
             <div class="project-content">
-                <div class="project-text1">
+                <div class="project-text">
                     <p>Calculateur de prêt hypothécaire interactif permettant de saisir un montant, un taux d'intérêt et une durée pour estimer les mensualités, avec validation et gestion des erreurs.</p>
                     <p>#html, #css, #js</p>
-                    <a href="Mes projets/calculateur.html" target="_blank"><button>Voir</button></a>
+                    <a href="Mes projets/calculateur.html" target="_blank"><button >Voir</button></a>
                 </div>
-                <div class="project-text2">
+                <div class="project-text">
                     <p>Formulaire interactif permettant de saisir une date, d'afficher son jour, mois et année séparément, et de calculer la différence en jours avec la date actuelle.</p>
                     <p>#html, #css, #js</p>
                     <a href="Mes projets/exercise3.html" target="_blank"><button>Voir</button></a>
                 </div>
-                <div class="project-text3">
+                <div class="project-text">
                     <p>Générateur de citations aléatoires qui propose des citations inspirantes, motivantes et variées à chaque utilisation.</p>
                     <p>#html, #css, #js</p>
                     <a href="Mes projets/generateur.html" target="_blank"><button>Voir</button></a>
@@ -79,6 +76,7 @@
             </div>
         </section>
 
+        <!--section compétences de Portfolio-->
         <section class="Competence" id="competence">
             <h2>Mes compétences</h2>
             <div class="Competence-content">
@@ -86,20 +84,20 @@
                     <h3>Soft Skills</h3>
                     <div class="skills">
                         <p>Gestion de projet</p>
-                        <div class="barre-progression">
-                            <div class="progression-fill" style="width: 80%;"></div>
+                        <div class="progression-barre">
+                            <div class="progression-intérieur" style="width: 80%;"></div>
                         </div>
                     </div>
                     <div class="skills">
                         <p>Résolution de problème</p>
-                        <div class="barre-progression">
-                            <div class="progression-fill" style="width: 60%;"></div>
+                        <div class="progression-barre">
+                            <div class="progression-intérieur" style="width: 60%;"></div>
                         </div>
                     </div>
                     <div class="skills">
                         <p>Adaptabilité</p>
-                        <div class="barre-progression">
-                            <div class="progression-fill" style="width: 90%;"></div>
+                        <div class="progression-barre">
+                            <div class="progression-intérieur" style="width: 90%;"></div>
                         </div>
                     </div>
                 </div>
@@ -108,36 +106,43 @@
                     <h3>Hard Skills</h3>
                     <div class="skills">
                         <p>HTML</p>
-                        <div class="barre-progression">
-                            <div class="progression-fill" style="width: 95%;"></div>
+                        <div class="progression-barre">
+                            <div class="progression-intérieur" style="width: 95%;"></div>
                         </div>
                     </div>
                     <div class="skills">
                         <p>CSS</p>
-                        <div class="barre-progression">
-                            <div class="progression-fill" style="width: 85%;"></div>
+                        <div class="progression-barre">
+                            <div class="progression-intérieur" style="width: 85%;"></div>
                         </div>
                     </div>
                     <div class="skills">
                         <p>JavaScript</p>
-                        <div class="barre-progression">
-                            <div class="progression-fill" style="width: 70%;"></div>
+                        <div class="progression-barre">
+                            <div class="progression-intérieur" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="skills">
+                        <p>VS code</p>
+                        <div class="progression-barre">
+                            <div class="progression-intérieur" style="width: 99%;"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!--section conctavt de Portfolio-->
         <section class="form" id="contact">
-            <h2>Vous avez un <span class="contact1">projet en tête ?</span> <br>N'hésitez pas à me <span class="contact2">contacter</span> </h2>
+            <h2>Vous avez un <span class="contact1">projet en tête ?</span> <br>N'hésitez pas à me <span class="contact1">contacter</span> </h2>
             <form action="" method="post">
                 <div class="form-content">
                     <div class="form-input1">
-                        <div class="input-group">
+                        <div class="input-groupe">
                             <label for="prenom">Votre prénom</label>
                             <input type="text" id="prenom" name="prenom" placeholder="Daniel" required>
                         </div>
-                        <div class="input-group">
+                        <div class="input-groupe">
                             <label for="nom">Votre nom</label>
                             <input type="text" id="nom" name="nom" placeholder="Kouame" required>
                         </div>
@@ -157,9 +162,17 @@
             </form>
         </section>
 
+        <!--section footer de Portfolio-->
         <footer>
-                <p >Designed by <span class="name">Kouame Yao Daniel Junior</span> with HTML CSS JS</p>
-                <p class="para1"> Tous droits réservés - 2025</p>
+            <section class="footerPartie">
+                <div class="footer-texte1">
+                    <p>Designed by <span class="prenom">Yao Daniel Junior</span> with HTML CSS JavaScript.</p>
+                </div>
+                <div class="footer-texte2">
+                    <p>Tous droits réservés - 2025</p>
+                </div>
+            </section>
+           
         </footer>
     </div>
 

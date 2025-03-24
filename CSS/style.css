@@ -8,37 +8,32 @@
 body{
     background-color:  #fff; 
 }
+/* Ma div avec la classe content qui englobe tout le contenu de mon site*/
 .content{
     width: 100%;
     margin: 0 auto;
     height: 100vh;
 }
-
+/* L'entête de mon Portfolio*/
 header {
+    position: fixed;
+    justify-content: left;
+    top: 0;
     width: 100%;
-    background-color: #2e8b57; 
-    color: #fff;
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    height: 90px;
-    z-index: 1000; 
-    padding: 10px 0; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    padding: 40px;
+    background-color: black;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    color: white;
+    align-items: center;
+    border-radius: 5px;
 }
 
 
 
 nav{
-   height: auto; 
-   width: auto;
-   display: flex;
-   justify-content: space-between;
-   padding: 3.5rem; 
-   text-align: center;
-}
-nav ul{
-    float: right;
+    display: flex;
+    justify-content: space-between;
 }
 nav ul li{
     display: inline-block;
@@ -62,33 +57,32 @@ nav ul li a{
 .prenom{
     color: #9340ff; 
 }
+/* La section accueil de mon Portfolio*/
 .home{
     width: 100%;
     display: flex;
     margin-top: 6rem;
     margin-bottom: 4rem;
+    text-align: center;
+    height: 80vh;
 }
 .home-content{
     width: 100%;
     align-items: center;
     display: flex; 
-    justify-content: space-between;
 }
 .home-text> p{
-    text-align: left;
     padding: 10px;
-    font-size: 2.8rem;
+    font-size: 2.7rem;
 }
-.home-text .nom{
-    color: #9340ff; 
-}
+
 .home-text> a> button{
     position: relative;
     display: block; 
     margin: 0 auto;
     cursor: pointer;
-    font-size: 35px;  
-    padding: 5px;
+    font-size: 2.6rem;  
+    padding: 10px;
     color: #fff;
     background-color: #9340ff; 
     border-radius: 5px;
@@ -97,16 +91,18 @@ nav ul li a{
 }
 .home-text> a> button:hover{
     background-color: #00c8c8; 
+    color: #111;
 }
 .home-image img{
    height: auto;
-   width: 35rem;
+   width: 25rem;
 }
+/* La section à propos de mon Portfolio*/
 .infos{
     width: 100%;
     display: flex;
     background-color: #f4f4f4; 
-    height: 70vh;
+    height: 80vh;
     border-bottom: 2px solid #2e8b57; 
     padding-bottom: 60px;
     margin-top: 4rem; 
@@ -123,33 +119,30 @@ nav ul li a{
 .infos-text{
     width: 100%;
 }
-.infos-text h2{
-    display: flex;
+.infos h2{
     position: relative;
-    text-align: center;
     margin: 0 auto;
     color: #9340ff; 
     width: 30rem;
-    font-size: 2.5rem;
-    bottom: 50px;
-    justify-content: space-around;
-    align-items: center;
+    font-size: 2.3rem;
+    left: 45%;
+    margin-top: 3rem;
 }
 
 .infos-text p{ 
-    font-size: 1.2rem;
+    position: relative;
+    font-size: 1.4rem;
     padding: 10px;
     margin-bottom: 10px;
-    margin-left: 30px;
+    text-align: justify;
+    right: 350px;
 }
 .infos-text .nom1{
     color: #9340ff; 
 }
-.infos-text .mot{
-    color: #9340ff; 
-}
+
 .infos-text button{
-    font-size: 25px;
+    font-size: 1.8rem;
     color: #fff;
     background-color: #9340ff; 
     padding: 10px;
@@ -157,34 +150,38 @@ nav ul li a{
     border: none;
     cursor: pointer;
     position: relative;
-    left: 40px;
-    top: 30px;
+    right: 340px;
+    top: 20px;
     border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     
 }
 .infos-text button:hover{
     background-color: #42e3ff; 
+    color: #111;
 }
 .infos-image img{
     height: auto;
-    width: 16rem;
+    width: 19rem;
     border-radius: 50%;
     border: 4px solid #9340ff; 
     position: relative;
-    right: 400px;
+    right: 300px;
     box-shadow: 2px 2px 25px black;
     top: 50px;
 }
+/* section projets de mon Portfolio*/
 .project{
     width: 100%; 
     justify-content: center;
     align-items: center;
     margin-top: 4rem; 
     margin-bottom: 4rem;
+    height: 70vh;
 }
 .project h2{
     text-align: center;
-    font-size: 25px;
+    font-size: 1.8rem;
     color: #9340ff; 
     margin-bottom: 30px;
 }
@@ -203,7 +200,7 @@ nav ul li a{
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px;
 }
-.project-text1, .project-text2, .project-text3{
+.project-text{
     padding: 8px 15px;
     background-color: #ddd;
     border-radius: 10px;
@@ -211,7 +208,7 @@ nav ul li a{
     box-shadow: 2px 2px 10px black;
 }
 
-.project-text1 button, .project-text2 button,.project-text3 button{
+.project-text button{
     font-size: 15px;
     background-color: #fff;
     padding: 5px 35px;
@@ -222,28 +219,29 @@ nav ul li a{
     border-radius: 10px;
     border: 1px solid black;
 }
-.project-text1 button:hover, .project-text2 button:hover,.project-text3 button:hover{
-    background-color: antiquewhite;
+.project-text button:hover{
+    background-color: blue;
 }
 
-/* La section compétence qui englobe tout */
+/* La section compétence de mon Portfolio*/
 .Competence {
     text-align: center;
-    padding: 200px;
+    padding: 100px 0; 
     background-color: #f7f7f7;
-    margin-top: 3rem; 
-    margin-bottom: 3rem;
+    margin: 0; 
+    height: 80vh; 
 }
 .Competence h2{
-    font-size: 35px;
+    font-size: 30px;
     position: relative;
-    bottom: 25px;
+    margin-top: 0;
+    bottom: 70px;
 }
 
 .Competence-content {
     display: flex;
     justify-content: space-around;
-    gap: 10px;
+    gap: 5px;
     margin-top: 30px;
 }
 
@@ -265,7 +263,7 @@ h3 {
 }
 
 /* Barre de progression des différentes compétences*/
-.barre-progression {
+.progression-barre {
     height: 8px;
     background-color: #ddd;
     border-radius: 5px;
@@ -275,33 +273,39 @@ h3 {
 }
 
 /* La barre colorée à l'intérieur des deux compétences  */
-.progression-fill {
+.progression-intérieur {
     height: 100%;
     background-color: #9340ff; 
     border-radius: 4px;
     
 }
+
+/* Section contact de mon Portfolio*/
 .form{
     width: 100%;
     justify-content: center;
     align-items: center;
     background-color: #2e8b57; 
-    margin-top: 4rem; 
-    margin-bottom: 4rem;
+    margin: 0; 
+    padding: 100px 0; 
+}
+input:focus, textarea:focus {
+    background-color: rgba(244, 244, 244, 0.5);
 }
 .form h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #fff;
     text-align: center;
+    margin-top: 0;
 }
-.form .contact1, .contact2{
+.form .contact1{
     color: #9340ff; 
 }
 .form-content{
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 30px;
 }
 .form-input1{
     display: flex;
@@ -320,12 +324,13 @@ h3 {
     text-align: left;
     }
 .form-input1 input{
-    font-size: 25px;
+    font-size: 26px;
     border: none;
     padding: 5px;
-    border: 2px solid #9340ff; 
+    border: 1px solid #9340ff; 
     border-radius: 10px;
 }
+
 .form-input2{
     width: 100%;
     text-align: center;
@@ -336,7 +341,7 @@ h3 {
     display: block;
     margin-bottom: 5px;
     font-size: 20px;
-    margin-right: 35%;
+    margin-right: 40%;
     
 }
 .form-input2 input{
@@ -345,7 +350,7 @@ h3 {
     border-radius: 10px;
     padding: 5px;
     width: 47%;
-    border: 2px solid #9340ff; 
+    border: 1px solid #9340ff; 
  }  
  .form-input3{
     width: 100%;
@@ -356,7 +361,8 @@ h3 {
     border: none;
     border-radius: 10px;
     margin-top: 10px;
-    border: 3px solid #9340ff; 
+    border: 1px solid #9340ff; 
+    padding: 5px;
  }
 .form-button{
     width: 100%;
@@ -378,24 +384,17 @@ h3 {
 .form-button button:hover{
     background-color: blue;
 }
-footer{
+/* section footer de mon Portfolio*/
+.footerPartie{
+    background-color: #f0f0f0;
+    height: 85px;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 100px;
+    justify-content: space-between;
     display: flex;
-    width: 100%;
-    background-color: #fff;
-    justify-content: space-around;
 }
-footer p{
-    font-size: 1.2rem;
-    margin-left: 20px;
-
-}
-footer p span{
-    color: #9340ff; 
-}
-.para{
-    display: flex;
-    margin-right: 80px
-}
+/* Le défilement en douceur des différentes parties de mon Portfolio*/
 .infos, .project, .Competence, .form {
     opacity: 0;
     transform: translateY(80px); 
